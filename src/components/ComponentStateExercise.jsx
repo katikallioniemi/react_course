@@ -25,6 +25,13 @@ export default class ComponentStateExercise extends React.Component {
     * HINT: you can check if IMAGES has the matching property
     * in a if statement by: 'if(IMAGES[upperCasedValue]) {...}'*/
 
+    const userInput = event.target.value.toUpperCase();
+    this.setState( {text: userInput});
+
+    if (IMAGES[userInput]) {
+        this.setState({imageName: userInput})
+    }
+
   }
 
   render() {

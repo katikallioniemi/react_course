@@ -7,6 +7,10 @@ const Component = props => (
     <div>
       <h2>Make evaluated value of 'buttonText' be displayed in
         a 'button' tag on the next line, and attach an onClick listener to it</h2>
+        <button onClick={event => {
+            console.log('onClick callback from: ' + buttonText);
+            console.log(event);
+        }}>{buttonText}</button>
     </div>
   </div>
 );
